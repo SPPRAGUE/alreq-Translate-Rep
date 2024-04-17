@@ -77,30 +77,24 @@ a .figno:after {
 	content: '';
 	}
 
-.qterm:before, .qchar:before { content: "‘"; }
-
-.qterm:after, .qchar:after { content: "’"; }
-
-.quote:before { content: '“'; }
-
-.quote:after { content: '”'; }
-
-code {
-  color: #A52A2A;
-  font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-  font-size: 100%;
-}
-
-samp, kbd {
-  font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-  font-size: 100%;
-}
-
+.qterm:before, .qchar:before { content: "'"; }
+.qterm:after, .qchar:after { content: "'"; }
+.quote:before { content: '"'; }
+.quote:after { content: '"'; }
+code { 
+	color: #A52A2A; 
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace; 
+    font-size: 100%; 
+    }
+samp, kbd { 
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace; 
+    font-size: 100%; 
+    }
 .uname {
-  text-transform: uppercase;
-  font-size: 85%;
-  letter-spacing:0.03em;
-}
+	text-transform: uppercase;
+	font-size: 85%;
+	letter-spacing:0.03em;
+	}
 
 .lettername {
   font-style: italic;
@@ -168,3 +162,41 @@ table.characters tr td.langMarkNo, span.langMarkNo {
 	flex: 1;
 	margin: 0;
 }
+
+
+.prompt {
+    font-style: italic;
+    color: #aaa;
+    font-size: 90%;
+    margin-bottom: 4em;
+}
+
+.large {
+    font-size: 300%;
+    }
+.trans, .ipa {
+    font-family: "GentiumPlus", serif;
+    font-style: italic;
+    }
+.meaning:before {
+    content:"‘";
+}
+.meaning:after {
+    content:"’";
+}
+
+.reslinks dt {
+    font-size: 80%;
+    }
+.reslinks dd {
+    font-size: 90%;
+    }
+
+.prompts { font-style: italic; color: #999; font-size: 90%; }
+
+dl.reslinks {
+    border-block-end: 1px solid #ccc;
+    margin-block-end: 3em;
+	}
+
+
