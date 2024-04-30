@@ -99,11 +99,40 @@
 
 
 
+<section id="h_acknowledgements">
+<h3>Contributors</h3>
+
+<p>The initial information in this document was created by the following participants in the W3C's <a href="https://w3c.github.io/alreq/home">Arabic Script Language Enablement</a> community: Behnam Esfahbod (Quora/Virgule Typeworks), Mostafa Hajizadeh, Najib Tounsi (Ecole Mohammadia d'Ingénieurs), Richard Ishida (W3C), Shervin Afshar (Netflix), and Titus Nemeth.</p>
+
+<p>Additional information and clarifications were provided by Khaled Hosny, and Azzeddine Lazrek.</p>
+
+<p data-lang="en">See also the <a href="https://github.com/w3c/alreq/graphs/contributors">GitHub contributors list</a> for the Arabic Script Enablement project, and the <a href="https://github.com/w3c/alreq/issues?q=is%3Aissue">discussions</a>.</p>
+</section>
+
+  
+  
+  
+  
+  
+  
+  
+
+<section id="h_about_this_document">
+<h3>About this document</h3>
+
+<p>The aim of this document is to describe the basic requirements for Arabic script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support users of Arabic scripts. The document focuses on Standard Arabic and Persian.</p>
+
+<p>The document focuses on typographic layout issues.  For a deeper understanding of the Arabic script itself and how it works see <cite>Modern Standard Arabic Orthography Notes</cite>, which includes topics such as: <a href="https://r12a.github.io/scripts/arab/arb.html#phonology">Phonology</a>, <a href="https://r12a.github.io/scripts/arab/arb.html#vowels">Vowels</a>, <a href="https://r12a.github.io/scripts/arab/arb.html#consonants">Consonants</a>, <!--a href="https://r12a.github.io/scripts/arab/arb.html#encoding">Encoding choices</a>,--> and <a href="https://r12a.github.io/scripts/arab/arb.html#numbers">Numbers</a>.</p>
+</section>
+
+
+
+
 
 <section id="h_gap_analysis">
 <h3>Gap analysis</h3>
 
-<p>This document is pointed to by a separate document, <a href="https://w3c.github.io/alreq/gap-analysis/">Arabic &amp; Persian Gap Analysis</a>, which describes gaps in support for Arabic and Persian on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+<p>This document is pointed to by a separate document, <a href="https://www.w3.org/TR/alreq-gap/">Arabic &amp; Persian Gap Analysis</a>, which describes gaps in support for Arabic and Persian on the Web, and prioritises and describes the impact of those gaps on the user.</p>
 
 <p>Wherever an unsupported feature is identified through the gap analysis process, the requirements for that feature need to be documented. This  document is where those requirements are described.</p>
 
@@ -116,9 +145,11 @@
 <section id="h_info_requests">
 <h3>Other related resources</h3>
 
-<p>The document <a href="https://www.w3.org/TR/typography/">Language enablement index</a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+<p>To complement any  content authored specifically for this document, the sections in the document also point to related, external information, tests, GitHub discussions, etc.</p>
 
-<p>The W3C also maintains a tracking system that  has links to github issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="http://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
+<p>The <a href="https://w3c.github.io/typography/"><cite>Language enablement index</cite></a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
+
+<p>The W3C also has a repository with discussion threads related to the Arabic script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues in W3C working groups related to Arabic scripts. See a list of <a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Aquestion+">unresolved questions</a> for Arabic script experts. Each section below points to related discussions. See also the <a href="https://w3c.github.io/alreq/home">repository home page</a>.</p>
 </section>
 
 
@@ -160,43 +191,230 @@
 
 
 
-<section id="h_arabic_script_overview">
-<h2>Characteristics of the Arabic script</h2>
-
-
-
-<section id="h_typography">
-<h3>Fundamental principles</h3>
-
-<p>Arabic script has some characteristics that are challenging for typographers and font designers. The examples below show some characteristics that require careful consideration. How, even in the simpler <span style="font-style: italic;">naskh</span> style, can typography, which came late to the Arabic world,  follow the tradition of the many authors and artists who manually shaped the Arabic writing over decades?</p>
-
 
 
 
 <section>
-<h4>Multi-level baselines</h4>
+<h2 id="h_text_direction">Text direction</h2>
 
-<p>Letters may join through a finely inclined line.</p>
 
-<figure id="fig_inclined_line">
-<div style="margin-left: 40px;"><img style="width: 132px; height: 62px;" alt=
-"slope baseline" src="images/yastabchiro.jpg"></div>
-<figcaption>Inclining baseline.</figcaption>
+
+
+
+<section id="h_bidi_text">
+<h3>Bidirectional text</h3>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#direction">Text direction</a></li>
+
+<li><cite><a target="_blank" href="https://www.w3.org/TR/html-bidi/">Additional Requirements for Bidi in HTML &amp; CSS</a></cite></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Abidirectional_text">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Abidirectional_text">All Arabic script issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Abidi-text">Arabic script issues in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-bidi-text.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/text_direction_tests/issues?q=is%3Aissue++label%3Ah2%3AArabic+label%3Adoc%3ABidirectional_text">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/the-dir-attribute">HTML5: dir basics</a></li><li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/the-dir-attribute-isolation">HTML5: dir isolation</a></li><li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/bidi-text-rendering">HTML5: Bidirectional text rendering</a></li><li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/the-dir-attribute-auto">HTML5: dir=auto</a></li><li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/the-bdo-element">HTML5: The bdo element</a></li><li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/the-dirname-attribute">HTML5: The dirname attribute</a></li><li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/native-user-interfaces">HTML5: Native user interfaces</a></li><li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/writing-modes-bidi">CSS Writing Modes: Bidi</a></li>
+</ul>
+</dd>
+
+
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#bidi_text">Text direction</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#bidi_text">Text direction</a></li>
+</ul>
+</dd>
+</dl>
+
+
+<p>Arabic script is written from right to left. Numbers, even Arabic numbers, are written from left to right, as is text in a script that is normally left-to-right.</p>
+
+<p>When the main script is Arabic, the layout and structure of pages and documents are also set from right to left.</p>
+
+
+
+
+
+<section id="h_bidirectional_text">
+<h4>The Unicode Bidirectional Algorithm</h4>
+
+<p>The <dfn data-lt="bidirectional algorithm|bidi algorithm"><a href=
+"http://www.unicode.org/reports/tr9/">Unicode Bidirectional Algorithm</a></dfn> (or
+<span class="qterm">bidi algorithm</span>, for short) [[UAX9]] details an algorithm for rendering right-to-left text and covers a myriad of situations, mixing different kinds of characters. A simpler explanation of the basics of the algorithm exists in the W3C article <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics">Unicode Bidirectional Algorithm basics</a>. [[UBA-BASICS]] You can refer to these documents for more information about Unicode’s bidirectional algorithm.</p>
+
+<p>A brief overview of the <a>bidirectional algorithm</a> follows, because the direction is an essential part of how Arabic script is used.</p>
+
+<p>The characters of a text are digitally stored and transferred in the same order that they are typed by a user. This is the order in which the text is read and pronounced by people and held in memory by software applications, as shown in <a href="#fig_order_in_memory"></a> for a sample text.</p>
+
+
+<figure id="fig_order_in_memory">
+<img src="images/order-in-memory.svg" alt="The order of characters in memory" style="width:80%">
+<figcaption>The order of characters in memory.</figcaption>
 </figure>
 
-<p>Or they may appear on two, square-ended lines.</p>
 
-<figure id="fig_square_ended_lines">
-<div style="margin-left: 40px;"><img style="width: 92px; height: 79px;" alt=
-"two level baselin" src="images/yastami3o.jpg"></div>
-<figcaption>Dual-level baseline.</figcaption>
+<p>But the order used when displaying text is different. The purpose of the bidi algorithm is to find display positions for the characters of a text. These positions are solely used for displaying texts. <a href="#fig_order_when_displayed"></a> shows the same sample text when prepared for display with the bidi algorithm.</p>
+
+<figure id="fig_order_when_displayed">
+<img src="images/order-when-displayed.svg" alt="The order of characters when displayed" style="width:80%">
+<figcaption>The order of characters when displayed.</figcaption>
 </figure>
 
-<p>Multilevel baselines don't occur in all fonts. The above examples use the Arabic Typesetting font. Compare those examples to more typical fonts:</p>
+<p>An initial step of the process involves determining each paragraph’s <span class=
+"qterm">base direction</span>: whether the paragraph is left-to-right or right-to-left. The base direction is either explicitly set by the author, inherited from the page, or (typically for user-generated content) detected based on the content of the paragraph. The base direction has two important uses later in the process.</p>
 
-<figure id="fig_single_baselines">
-<p style="margin-left: 40px;"><img style="width: 110px; height: 93px;" alt="normal Font" src="images/yastabchiroNormal.jpg"></p>
-<figcaption>Flat baselines.</figcaption>
+<p>The next step is to split the text into <span class="qterm">directional runs</span>. Each directional run is a sequence of characters with the same direction.</p>
+
+<figure id="fig_directional_runs">
+<img src="images/directional-runs.svg" alt="Splitting a text into 3 directional runs">
+<figcaption>Splitting a text into 3 directional runs.</figcaption>
+</figure>
+
+<p>Inside each run, all the characters follow the same order. The runs themselves are ordered for visual representation from left to right or from right to left, depending on the base direction of the paragraph. <a href="#fig_order_of_directional_runs"></a> demonstrates an example of this. This is the first effect of the base direction.</p>
+
+<figure id="fig_order_of_directional_runs">
+<img src="images/order-of-directional-runs.svg" alt=
+"The effect of base direction on the order of runs">
+<figcaption>The effect of base direction on the order of runs.</figcaption>
+</figure>
+
+<p>Unicode has a <span class="qterm">bidi class</span> (or <span class="qterm">bidi
+type</span>) property defined for each character that is used to determine the direction of each character. All the Arabic letters are marked as right-to-left characters, while Latin characters have the left-to-right category.</p>
+
+<p>Some characters, mostly punctuation marks, are <span class="qterm">neutral</span>. The
+direction of these characters is derived from their surrounding characters. If a neutral character is surrounded by characters of the same direction (e.g. a space surrounded by Arabic letters), it gets the direction of its neighbors. Otherwise (e.g. a space between an Arabic and a Latin, or a neutral character appearing at the start or the end of a paragraph), the neutral character gets its direction from the paragraph’s base direction. This is another effect of the base direction in the bidi algorithm.</p>
+
+<p>The above explanation of the bidi algorithm is highly simplified, to convey only the
+essentials of how Arabic text is transformed for rendering. The actual algorithm deals with many more character types and edge cases. Please refer to <a href=
+"https://www.w3.org/International/articles/inline-bidi-markup/uba-basics">Unicode
+Bidirectional Algorithm basics</a> [[UBA-BASICS]] for more information or <a href=
+"http://www.unicode.org/reports/tr9/">Unicode Bidirectional Algorithm</a> [[UAX9]] for the official detailed documentation.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="h_vertical_text">
+<h3>Vertical text</h3>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Avertical_text">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Avertical_text">All Arabic script issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+is%3Aissue+label%3Aspec-type-issue+label%3Aalreq+label%3Ai%3Avertical-text">Arabic script issues in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-vertical-text.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/text_direction_tests/issues?q=is%3Aissue++label%3Ah2%3AArabic+label%3Adoc%3AVertical_text">Exploratory/interactive test repo</a></li>
+</ul>
+</dd>
+
+
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#vertical_text">Vertical text</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#vertical_text">Vertical text</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+
+
+<p>In situations where short runs of text run vertically, for example on book spines or in table headers, Arabic text is rotated to run along the line. It may be rotated so that the tops of the letters face to the left (read the text from top to bottom) or to the right (read the text from bottom to top).</p>
+
+
+<figure id="fig_vertical_spine">
+<img style="width: 89px;" src="images/vertical-rotated-left.png" alt=
+"Vertical Arabic top down"> &nbsp; <img style="width: 90px;" src="images/vertical-rotated-right.png" alt="Vertical Arabic bottom up">
+<figcaption>Vertical Arabic, top-down and bottom-up flow.</figcaption>
+</figure>
+
+<p>The flow of text, top-down vs. bottom-up, may depend on regions or authors. The left
+case in [[[#fig_vertical_spine]]] is a typically francophone style for book
+spines, whereas the right case is an anglophone style.</p>
+
+
+
+
+
+
+<section id="h_vertical_embedding">
+<h5>Arabic embedded in vertically orientated text</h5>
+
+<p>When Arabic is embedded in body text that is set vertically, such as CJK or Mongolian text, it is also normally rotated so as to run along the line. Typically, the Arabic text will be read from bottom to top of the line.</p>
+
+<p>When the Arabic text spans more than one line, the text is wrapped in the same way as it would be in horizontal text, ie. the first part of the Arabic text is kept on the
+first line, and subsequent parts of the Arabic text appear on subsequent lines.
+Therefore, in the case of Mongolian, where lines are read left-to-right, the Arabic text lines are also read left-to-right, whereas in Chinese or Japanese, where vertical lines are normally read right-to-left, the Arabic text lines are also read right-to-left.</p>
+
+<figure id="fig_arabic_in_chinese">
+<img style="width: 64px; height: 220px;" src="images/embedded-ar.png" alt=" ">
+<figcaption>Arabic text embedded in vertical Chinese.</figcaption>
 </figure>
 </section>
 
@@ -204,127 +422,108 @@
 
 
 
-<section>
-<h4>Multi-context joining</h4>
-
-<p>Rendering of letters depends not only on their place in the word (initial, medial, final) but also on their neighboring letters, i.e. the letter they join with. Each letter has a different appearance in each combination.</p>
 
 
-<figure id="fig_forms_of_noon">
-<img style="width: 324px; height: 79px;" alt="Different initial shape of noon" src="images/differentInitialNoon.jpg">
-<figcaption>Initial letter noon, showing many different forms.</figcaption>
+<section id="h_vertical_upright">
+<h5>Upright vertical Arabic text</h5>
+
+<p>There are attested cases of Arabic text arranged vertically with the letters upright, for example in signboards for cinemas or theatres. It is not clear, at this point whether this a standard approach for Arabic text, or just an unusual layout that mimics Western typographic approaches.</p>
+
+<figure id="fig_upright_vertical">
+<img src="images/odeonMovie.png" alt="Arabic Upright on a front movie">
+<figcaption>Arabic upright on a front movie (see arrow).</figcaption>
 </figure>
 
-<p>Fonts don't always comply with or respect this kind of <span class=
-"qterm">tuning</span>. To do so, fonts need many glyphs in order to adapt to each
-context. In more modern typefaces some of these connections are implemented by ligatures, but ligatures can't capture or cover all joining behavior.</p>
+<p>The following should be noted in <a href="#fig_upright_vertical"></a>.</p>
 
-<p>In the two left most words, the initial noon differs in that one raises a kind of stroke. This property of raising a stroke is common for a number of letters (beh, teh, noon, theh) which are taller than their connected letters in order to be distinguished in some contexts, such as <img style="vertical-align: middle; width: 37px; height: 31px;" alt="Beh with stroke before seen" src="images/bsl.jpg"> vs. <img style="vertical-align: middle; width: 43px; height: 39px;" alt="Beh without stroke after seen" src="images/sbl.jpg">, or to resolve ambiguity. See also [[[#h_teeth_letters]]].</p>
-</section>
-
-
-
-
-<section>
-<h4>Words as groups of letters</h4>
-
-<p>A word shape is composed of not (only) a set of "horizontally" connected letters, but  groups of letters (syntagmes).</p>
-
-<p>[[[#fig_word_groups_1]]] shows syntagmes in two words in a naskh font with many glyph variants.</p>
-
-<figure id="fig_word_groups_1">
-<table>
-<tbody>
-<tr>
-<td style="text-align: center; width: 40%;"><img style="width: 76px; height: 46px;"
-alt="Aleph and two groups of letters to form a word" src="images/barmajaAmiri.jpg">
-</td>
-
-<td style="text-align: center;width:40%;"><img style="width: 127px; height: 57px;"
-alt="two other group of letters" src="images/stimrarihimaArabicTypesetting.jpg">
-</td>
-</tr>
-</tbody>
-</table>
-<figcaption>Groups of letters are colored blue or red.</figcaption>
-</figure>
-
-
-<p>Compare that with the same words in more plain font:</p>
-
-
-<figure id="fig_word_groups_2">
-<table>
-<tbody>
-<tr>
-<td style="text-align: center; width:40%;"><img style="width: 98px; height: 43px;"
-alt="same word in more normal font" src="images/barmajaDefault.png">
-</td>
-
-<td style="text-align: center; width: 40%;"><img style=
-"width: 144px; height: 46px;" alt="same word in default font" src="images/stimrarihimaDefault.jpg">
-</td>
-</tr>
-</tbody>
-</table>
-<figcaption>Can't really say letter groups. Rather a "horizontal sequence of letters of almost same width".</figcaption>
-</figure>
-
-<p>Group combinations cannot be covered by general or usual ligatures.</p>
-</section>
-
-
-
-
-
-
-<section>
-<h4>Vertical joining</h4>
-
-
-<p>Groups of letters may also join vertically (top down) instead of right to left. Not all fonts permit this.</p>
-
-<figure id="fig_vertical_joining">
-<table>
-<tbody>
-<tr>
-<td style="text-align: center;"><img style=
-"text-align: center; width: 65px; height: 70px;" alt="Vertical joining" src="images/vertivalJoin.jpg"></td>
-
-<td style="text-align: center;"><img style=
-"text-align: center; width: 69px; height: 46px;" alt="horizontal joing" src="images/horizontalJoin.jpg"></td>
-</tr>
-</tbody>
-</table>
-<figcaption>Almost vertical joining (left), vs. horizontal joins (right).</figcaption>
-</figure>
-
-<p>Once again, some fonts try standard ligatures, but this is not ligature. This is
-rather (good) writing practice/style.</p>
-
-
-<p>One should note that all these features have not only an aesthetic side, but also play a role in justification. Choosing a joining style to suit the desired line width is done at the discretion of authors for hand-written text. Applications should provide general rules to emulate these options, but achieving such justification requires sophisticated algorithms.</p>
-</section>
-
-
-
-
-
-
-<section id="h_teeth_letters">
-<h4>The so-called teeth letters.</h4>
-
-<p>Where successive letters have a uniform medial shape, they can be rendered in a way that resembles teeth.</p>
-
-<figure id="fig_teeth_letters">
-<div><img style="width: 276px; height: 74px;" alt="Teeth letters" src="images/teeth.jpg"></div>
-<figcaption>"Teeth" letters.</figcaption>
-</figure>
-
-<p>Individual letter shapes may vary according to the context. It's not always the same letters (in red)
-which raise the stroke in [[[#fig_teeth_letters]]].</p>
+<ol>
+<li>Letters flow from top to bottom (as with Latin script).</li>
+<li>Isolated form of letters seems more appropriate here than the joined form.</li>
+<li>Diacritic marks, if any, must be applied to letters and not appear on separate
+lines.</li>
+</ol>
 </section>
 </section>
+</section>  
+
+
+
+
+
+
+
+<section id="h_shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+
+<section id="h_writing_styles">
+<h3>Fonts &amp; font styles</h3>
+
+<aside class="prompts">How are fonts grouped into recognisable writing styles? How is each writing style used? Are OpenType features needed? What other font-related requirements and issue exist?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#writing_styles">Font styles</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Afonts+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Afonts">All Arabic script issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Afonts">Arabic script issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-fonts.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/glyph_character_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3AFonts">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/default-font">Exploratory: Language-specific default fonts</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#fonts">Fonts</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#fonts">Fonts &amp; font styles</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+<p>Traditionally, the Arabic alphabet contains 28 letters, though for practical purposes it makes sense to include the hamzah, which increases the number of letters to 29. Numerous letters share the same skeleton and are only distinguished by diacritic signs. Since letters change according to their position in the word, Arabic fonts typically contain hundreds of glyphs. Depending on the design of the font, the inclusion of ligatures, stylistic alternates, contextually sensitive shapes, language localisation, punctuation, etc. can further expand the glyphset. Some contemporary fonts include many hundreds, in some cases even thousands of glyphs.</p>
+<p>Early typefaces, some still in use today, incorporated design features based on a variety of simplifications. For example, one of the first approaches  used a "typewriter" style, where the same glyph is used for different positions in a word. This is the case for initial and medial shapes for most  letters. It is generally the browser default font for the Arabic script. A more unifying approach is the use of a single and detached glyphs for each letter without joining. Other approaches were used, producing visual results of more or less practicality.</p>
+
+<p>Nowadays, there is a large choice of fonts, and one can choose the font that best suits  one's typographical desire. However, one may also wish to take into account some non-typographical considerations like the following:</p>
+
+<ul>
+<li>Accessibility (readability and visibility).</li>
+<li>Devices with a small screen (for example, larger loop and teeth height,
+small descenders etc.), although fonts actually appear better on smartphones</li>
+<li>Font style for titles and banners and alike (small number of words), may differ from the style for content text (long text).</li>
+<li>Shapes and proportions (the size issue) in mixed texts.</li>
+<li>Some fonts might give other opportunities for line justification than just the use of word spacing (See [[[#h_ligatures]]]).</li>
+<li>etc.</li>
+</ul>
+
 
 
 
@@ -480,28 +679,167 @@ manuscripts. <em>Rabat</em>, a <em><a href="#def_mabsut">mabsut</a></em> version
 
 
 
-<section id="h_characters_and_words">
-<h2>Characters and phrases</h2>
 
 
-<section id="h_encoding">
-<h3>Characters &amp; encoding</h3>
+<section class="h_context">
+<h3>Context-based shaping &amp; positioning</h3>
+
+<aside class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances? Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</aside>
 
 
-<p>Arabic script is encoded in the Unicode standard <em>semantically</em>, meaning that every letter receives only a single Unicode character, no matter how many different contextual shapes it may exhibit.</p>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic script Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#context">Context-based shaping &amp; positioning</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aglyph_shaping_positioning+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aglyph_shaping_positioning">All Arabic script issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Aglyphs">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+</dd>
 
 
-<p>Unicode also has a partial set of <em>non-semantic</em> encoded characters for the Arabic script, under blocks <em>Arabic Presentation Forms-A</em> and <em>Arabic Presentation Forms-B</em>, which are deprecated and should not be used in general interchange.</p>
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#glyphs">Glyph shaping and positioning</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#glyphs">Glyph shaping &amp; positioning</a></li>
+</ul>
+</dd>
+</dl>
 
 
-<p>[[[#characters-tables]]] lists characters used for the Arabic and Persian languages. Characters used for these languages include letters and diacritics, three sets of digits (usage depending on the region), punctuation (some common and some specific to the script), symbols, and Unicode formatting characters.</p>
 
 
-<p>The majority of these characters are common among different languages, though there are three different sets of digits for use by different languages. Most of the alphabetical characters are used by all the languages using Arabic scripts, but there are exceptions, such as the Arabic letter <span class="lettername">yeh</span> being represented with two different characters, <span class="uname">U+064A ARABIC LETTER YEH</span> (<span lang="ar" dir="rtl">ي</span>) and <span class="uname">U+06CC ARABIC LETTER FARSI YEH</span> (<span lang="ar" dir=
-"rtl">ی</span>). These differences among the character sets of each language are marked in the appendix tables.</p>
 
 
-<p>Control characters are used to produce the correct spelling of the words or to ensure correct combination with left-to-right content. Consequently, they should be preserved when storing and displaying texts.</p>
+<p>Arabic script has some characteristics that are challenging for typographers and font designers. The examples below show some characteristics that require careful consideration. How, even in the simpler <span style="font-style: italic;">naskh</span> style, can typography, which came late to the Arabic world,  follow the tradition of the many authors and artists who manually shaped the Arabic writing over decades.</p>
+
+
+
+
+<section>
+<h4>Multi-level baselines</h4>
+
+<p>Letters may join through a finely inclined line.</p>
+
+<figure id="fig_inclined_line">
+<div style="margin-left: 40px;"><img style="width: 132px; height: 62px;" alt=
+"slope baseline" src="images/yastabchiro.jpg"></div>
+<figcaption>Inclining baseline.</figcaption>
+</figure>
+
+<p>Or they may appear on two, square-ended lines.</p>
+
+<figure id="fig_square_ended_lines">
+<div style="margin-left: 40px;"><img style="width: 92px; height: 79px;" alt=
+"two level baselin" src="images/yastami3o.jpg"></div>
+<figcaption>Dual-level baseline.</figcaption>
+</figure>
+
+<p>Multilevel baselines don't occur in all fonts. The above examples use the Arabic Typesetting font. Compare those examples to more typical fonts:</p>
+
+<figure id="fig_single_baselines">
+<p style="margin-left: 40px;"><img style="width: 110px; height: 93px;" alt="normal Font" src="images/yastabchiroNormal.jpg"></p>
+<figcaption>Flat baselines.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section>
+<h4>Multi-context joining</h4>
+
+<p>Rendering of letters depends not only on their place in the word (initial, medial, final) but also on their neighboring letters, i.e. the letter they join with. Each letter has a different appearance in each combination.</p>
+
+
+<figure id="fig_forms_of_noon">
+<img style="width: 324px; height: 79px;" alt="Different initial shape of noon" src="images/differentInitialNoon.jpg">
+<figcaption>Initial letter noon, showing many different forms.</figcaption>
+</figure>
+
+<p>Fonts don't always comply with or respect this kind of <span class=
+"qterm">tuning</span>. To do so, fonts need many glyphs in order to adapt to each
+context. In more modern typefaces some of these connections are implemented by ligatures, but ligatures can't capture or cover all joining behavior.</p>
+
+<p>In the two left most words, the initial noon differs in that one raises a kind of stroke. This property of raising a stroke is common for a number of letters (beh, teh, noon, theh) which are taller than their connected letters in order to be distinguished in some contexts, such as <img style="vertical-align: middle; width: 37px; height: 31px;" alt="Beh with stroke before seen" src="images/bsl.jpg"> vs. <img style="vertical-align: middle; width: 43px; height: 39px;" alt="Beh without stroke after seen" src="images/sbl.jpg">, or to resolve ambiguity. See also [[[#h_teeth_letters]]].</p>
+</section>
+
+
+
+
+<section>
+<h4>Words as groups of letters</h4>
+
+<p>A word shape is composed of not (only) a set of "horizontally" connected letters, but  groups of letters (syntagmes).</p>
+
+<p>[[[#fig_word_groups_1]]] shows syntagmes in two words in a naskh font with many glyph variants.</p>
+
+<figure id="fig_word_groups_1">
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width: 40%;"><img style="width: 76px; height: 46px;"
+alt="Aleph and two groups of letters to form a word" src="images/barmajaAmiri.jpg">
+</td>
+
+<td style="text-align: center;width:40%;"><img style="width: 127px; height: 57px;"
+alt="two other group of letters" src="images/stimrarihimaArabicTypesetting.jpg">
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Groups of letters are colored blue or red.</figcaption>
+</figure>
+
+
+<p>Compare that with the same words in more plain font:</p>
+
+
+<figure id="fig_word_groups_2">
+<table>
+<tbody>
+<tr>
+<td style="text-align: center; width:40%;"><img style="width: 98px; height: 43px;"
+alt="same word in more normal font" src="images/barmajaDefault.png">
+</td>
+
+<td style="text-align: center; width: 40%;"><img style=
+"width: 144px; height: 46px;" alt="same word in default font" src="images/stimrarihimaDefault.jpg">
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Can't really say letter groups. Rather a "horizontal sequence of letters of almost same width".</figcaption>
+</figure>
+
+<p>Group combinations cannot be covered by general or usual ligatures.</p>
 </section>
 
 
@@ -509,23 +847,52 @@ manuscripts. <em>Rabat</em>, a <em><a href="#def_mabsut">mabsut</a></em> version
 
 
 
-<section id="h_fonts">
-<h3>Fonts</h3>
+<section>
+<h4>Vertical joining</h4>
 
-<p>Traditionally, the Arabic alphabet contains 28 letters, though for practical purposes it makes sense to include the hamzah, which increases the number of letters to 29. Numerous letters share the same skeleton and are only distinguished by diacritic signs. Since letters change according to their position in the word, Arabic fonts typically contain hundreds of glyphs. Depending on the design of the font, the inclusion of ligatures, stylistic alternates, contextually sensitive shapes, language localisation, punctuation, etc. can further expand the glyphset. Some contemporary fonts include many hundreds, in some cases even thousands of glyphs.</p>
-<p>Early typefaces, some still in use today, incorporated design features based on a variety of simplifications. For example, one of the first approaches  used a "typewriter" style, where the same glyph is used for different positions in a word. This is the case for initial and medial shapes for most  letters. It is generally the browser default font for the Arabic script. A more unifying approach is the use of a single and detached glyphs for each letter without joining. Other approaches were used, producing visual results of more or less practicality.</p>
 
-<p>Nowadays, there is a large choice of fonts, and one can choose the font that best suits  one's typographical desire. However, one may also wish to take into account some non-typographical considerations like the following:</p>
+<p>Groups of letters may also join vertically (top down) instead of right to left. Not all fonts permit this.</p>
 
-<ul>
-<li>Accessibility (readability and visibility).</li>
-<li>Devices with a small screen (for example, larger loop and teeth height,
-small descenders etc.), although fonts actually appear better on smartphones</li>
-<li>Font style for titles and banners and alike (small number of words), may differ from the style for content text (long text).</li>
-<li>Shapes and proportions (the size issue) in mixed texts.</li>
-<li>Some fonts might give other opportunities for line justification than just the use of word spacing (See [[[#h_ligatures]]]).</li>
-<li>etc.</li>
-</ul>
+<figure id="fig_vertical_joining">
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;"><img style=
+"text-align: center; width: 65px; height: 70px;" alt="Vertical joining" src="images/vertivalJoin.jpg"></td>
+
+<td style="text-align: center;"><img style=
+"text-align: center; width: 69px; height: 46px;" alt="horizontal joing" src="images/horizontalJoin.jpg"></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Almost vertical joining (left), vs. horizontal joins (right).</figcaption>
+</figure>
+
+<p>Once again, some fonts try standard ligatures, but this is not ligature. This is
+rather (good) writing practice/style.</p>
+
+
+<p>One should note that all these features have not only an aesthetic side, but also play a role in justification. Choosing a joining style to suit the desired line width is done at the discretion of authors for hand-written text. Applications should provide general rules to emulate these options, but achieving such justification requires sophisticated algorithms.</p>
+</section>
+
+
+
+
+
+
+<section id="h_teeth_letters">
+<h4>The so-called teeth letters.</h4>
+
+<p>Where successive letters have a uniform medial shape, they can be rendered in a way that resembles teeth.</p>
+
+<figure id="fig_teeth_letters">
+<div><img style="width: 276px; height: 74px;" alt="Teeth letters" src="images/teeth.jpg"></div>
+<figcaption>"Teeth" letters.</figcaption>
+</figure>
+
+<p>Individual letter shapes may vary according to the context. It's not always the same letters (in red)
+which raise the stroke in [[[#fig_teeth_letters]]].</p>
+</section>
 
 
 
@@ -588,153 +955,62 @@ character.</p>
 
 
 
-<section id="h_direction">
-<h3>Direction</h3>
-
-<p>Arabic script is written from right to left. Numbers, even Arabic numbers, are written from left to right, as is text in a script that is normally left-to-right.</p>
-
-<p>When the main script is Arabic, the layout and structure of pages and documents are also set from right to left.</p>
 
 
+<section class="h_cursive">
+<h3>Cursive text</h3>
 
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic script Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#cursive">Cursive script</a></li>
+</ul>
+</dd>
 
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Acursive+label%3Aquestion+">Open requests for information</a></li>
 
-<section id="h_bidirectional_text">
-<h4>Bidirectional text</h4>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Acursive">All Arabic script issues on this topic in the alreq repo</a></li>
 
-<p>The <dfn data-lt="bidirectional algorithm|bidi algorithm"><a href=
-"http://www.unicode.org/reports/tr9/">Unicode Bidirectional Algorithm</a></dfn> (or
-<span class="qterm">bidi algorithm</span>, for short) [[UAX9]] details an algorithm for rendering right-to-left text and covers a myriad of situations, mixing different kinds of characters. A simpler explanation of the basics of the algorithm exists in the W3C article <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics">Unicode Bidirectional Algorithm basics</a>. [[UBA-BASICS]] You can refer to these documents for more information about Unicode’s bidirectional algorithm.</p>
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Acursive">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
 
-<p>A brief overview of the <a>bidirectional algorithm</a> follows, because the direction is an essential part of how Arabic script is used.</p>
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-cursive.html#arabic">Exploratory/interactive test results</a></li>
 
-<p>The characters of a text are digitally stored and transferred in the same order that they are typed by a user. This is the order in which the text is read and pronounced by people and held in memory by software applications, as shown in <a href="#fig_order_in_memory"></a> for a sample text.</p>
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3ACursive_text">Exploratory/interactive test repo</a></li>
 
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/css-text-shaping">CSS3 Text, Cursive joining</a></li>
 
-<figure id="fig_order_in_memory">
-<img src="images/order-in-memory.svg" alt="The order of characters in memory" style="width:80%">
-<figcaption>The order of characters in memory.</figcaption>
-</figure>
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/cursive">Exploratory: Cursive behaviour</a></li>
+</ul>
 
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#cursive">Cursive text</a></li>
+</ul>
+</dd>
 
-<p>But the order used when displaying text is different. The purpose of the bidi algorithm is to find display positions for the characters of a text. These positions are solely used for displaying texts. <a href="#fig_order_when_displayed"></a> shows the same sample text when prepared for display with the bidi algorithm.</p>
-
-<figure id="fig_order_when_displayed">
-<img src="images/order-when-displayed.svg" alt="The order of characters when displayed" style="width:80%">
-<figcaption>The order of characters when displayed.</figcaption>
-</figure>
-
-<p>An initial step of the process involves determining each paragraph’s <span class=
-"qterm">base direction</span>: whether the paragraph is left-to-right or right-to-left. The base direction is either explicitly set by the author, inherited from the page, or (typically for user-generated content) detected based on the content of the paragraph. The base direction has two important uses later in the process.</p>
-
-<p>The next step is to split the text into <span class="qterm">directional runs</span>. Each directional run is a sequence of characters with the same direction.</p>
-
-<figure id="fig_directional_runs">
-<img src="images/directional-runs.svg" alt="Splitting a text into 3 directional runs">
-<figcaption>Splitting a text into 3 directional runs.</figcaption>
-</figure>
-
-<p>Inside each run, all the characters follow the same order. The runs themselves are ordered for visual representation from left to right or from right to left, depending on the base direction of the paragraph. <a href="#fig_order_of_directional_runs"></a> demonstrates an example of this. This is the first effect of the base direction.</p>
-
-<figure id="fig_order_of_directional_runs">
-<img src="images/order-of-directional-runs.svg" alt=
-"The effect of base direction on the order of runs">
-<figcaption>The effect of base direction on the order of runs.</figcaption>
-</figure>
-
-<p>Unicode has a <span class="qterm">bidi class</span> (or <span class="qterm">bidi
-type</span>) property defined for each character that is used to determine the direction of each character. All the Arabic letters are marked as right-to-left characters, while Latin characters have the left-to-right category.</p>
-
-<p>Some characters, mostly punctuation marks, are <span class="qterm">neutral</span>. The
-direction of these characters is derived from their surrounding characters. If a neutral character is surrounded by characters of the same direction (e.g. a space surrounded by Arabic letters), it gets the direction of its neighbors. Otherwise (e.g. a space between an Arabic and a Latin, or a neutral character appearing at the start or the end of a paragraph), the neutral character gets its direction from the paragraph’s base direction. This is another effect of the base direction in the bidi algorithm.</p>
-
-<p>The above explanation of the bidi algorithm is highly simplified, to convey only the
-essentials of how Arabic text is transformed for rendering. The actual algorithm deals with many more character types and edge cases. Please refer to <a href=
-"https://www.w3.org/International/articles/inline-bidi-markup/uba-basics">Unicode
-Bidirectional Algorithm basics</a> [[UBA-BASICS]] for more information or <a href=
-"http://www.unicode.org/reports/tr9/">Unicode Bidirectional Algorithm</a> [[UAX9]] for the official detailed documentation.</p>
-</section>
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#cursive">Cursive text</a></li>
+</ul>
+</dd>
+</dl>
 
 
 
-
-
-
-<section id="h_vertical_text">
-<h4>Vertical text</h4>
-
-
-<p>In situations where short runs of text run vertically, for example on book spines or in table headers, Arabic text is rotated to run along the line. It may be rotated so that the tops of the letters face to the left (read the text from top to bottom) or to the right (read the text from bottom to top).</p>
-
-
-<figure id="fig_vertical_spine">
-<img style="width: 89px;" src="images/vertical-rotated-left.png" alt=
-"Vertical Arabic top down"> &nbsp; <img style="width: 90px;" src="images/vertical-rotated-right.png" alt="Vertical Arabic bottom up">
-<figcaption>Vertical Arabic, top-down and bottom-up flow.</figcaption>
-</figure>
-
-<p>The flow of text, top-down vs. bottom-up, may depend on regions or authors. The left
-case in [[[#fig_vertical_spine]]] is a typically francophone style for book
-spines, whereas the right case is an anglophone style.</p>
-
-
-
-
-
-
-<section id="h_vertical_embedding">
-<h5>Arabic embedded in vertically orientated text</h5>
-
-<p>When Arabic is embedded in body text that is set vertically, such as CJK or Mongolian text, it is also normally rotated so as to run along the line. Typically, the Arabic text will be read from bottom to top of the line.</p>
-
-<p>When the Arabic text spans more than one line, the text is wrapped in the same way as it would be in horizontal text, ie. the first part of the Arabic text is kept on the
-first line, and subsequent parts of the Arabic text appear on subsequent lines.
-Therefore, in the case of Mongolian, where lines are read left-to-right, the Arabic text lines are also read left-to-right, whereas in Chinese or Japanese, where vertical lines are normally read right-to-left, the Arabic text lines are also read right-to-left.</p>
-
-<figure id="fig_arabic_in_chinese">
-<img style="width: 64px; height: 220px;" src="images/embedded-ar.png" alt=" ">
-<figcaption>Arabic text embedded in vertical Chinese.</figcaption>
-</figure>
-</section>
-
-
-
-
-
-
-
-<section id="h_vertical_upright">
-<h5>Upright vertical Arabic text</h5>
-
-<p>There are attested cases of Arabic text arranged vertically with the letters upright, for example in signboards for cinemas or theatres. It is not clear, at this point whether this a standard approach for Arabic text, or just an unusual layout that mimics Western typographic approaches.</p>
-
-<figure id="fig_upright_vertical">
-<img src="images/odeonMovie.png" alt="Arabic Upright on a front movie">
-<figcaption>Arabic upright on a front movie (see arrow).</figcaption>
-</figure>
-
-<p>The following should be noted in <a href="#fig_upright_vertical"></a>.</p>
-
-<ol>
-<li>Letters flow from top to bottom (as with Latin script).</li>
-<li>Isolated form of letters seems more appropriate here than the joined form.</li>
-<li>Diacritic marks, if any, must be applied to letters and not appear on separate
-lines.</li>
-</ol>
-</section>
-</section>
-</section>  
-
-
-
-
-
-
-
-<section id="h_joining">
-<h3>Joining</h3>
 
 <p>Arabic script is a cursive writing system; i.e, letters can join to their neighboring letters. Besides the core behavior of the script, there are some details on how content is encoded in Unicode, and some rules around joining behavior when rendering special cases.</p>
+
 
 
 
@@ -1170,8 +1446,212 @@ specific style to a single letter (or a few letters) in a word. For example, <a 
 
 
 
-<section id="h_segmentation">
-<h3>Text Segmentation</h3>
+
+
+<section class="h_fontstyle">
+<h3>Letterform slopes, weights, &amp; italics</h3>
+
+<aside class="prompts">Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</aside>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic  Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#fontstyle">Letterform slopes, weights, &amp; italics</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aletterforms+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aletterforms">All Arabic script issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Afont-style+">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letterforms.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3ALetterforms">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#font_style">Font styles, weight, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#font_style">Letterform slopes, weights, &amp; italics</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+
+<!--section class="h_transforms">
+<h3>Character transforms ****NA****</h3>
+
+</section-->
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="h_graphemes">
+<h2>Typographic units</h2>
+
+
+
+
+<section class="h_transforms">
+<h3>Characters &amp; encoding</h3>
+
+
+<aside class="prompts">Most languages are now supported by Unicode, but there are still occasional issues. In particular, there may be issues related to ordering of characters, or competing encodings (as in Myanmar), or standardisation of variation selectors or the encoding model (as in Mongolian).</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#vowels" class="external">Vowels</a> •  <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#consonants" class="external">Consonants</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Acharacters_and_encoding+label%3Aquestion">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Acharacters_and_encoding">All Arabic script issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Acharset">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#charset">Characters &amp; encoding</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#charset">Characters &amp; encoding</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+
+<p>Arabic script is encoded in the Unicode standard <em>semantically</em>, meaning that every letter receives only a single Unicode character, no matter how many different contextual shapes it may exhibit.</p>
+
+
+<p>Unicode also has a partial set of <em>non-semantic</em> encoded characters for the Arabic script, under blocks <em>Arabic Presentation Forms-A</em> and <em>Arabic Presentation Forms-B</em>, which are deprecated and should not be used in general interchange.</p>
+
+
+<p>[[[#characters-tables]]] lists characters used for the Arabic and Persian languages. Characters used for these languages include letters and diacritics, three sets of digits (usage depending on the region), punctuation (some common and some specific to the script), symbols, and Unicode formatting characters.</p>
+
+
+<p>The majority of these characters are common among different languages, though there are three different sets of digits for use by different languages. Most of the alphabetical characters are used by all the languages using Arabic scripts, but there are exceptions, such as the Arabic letter <span class="lettername">yeh</span> being represented with two different characters, <span class="uname">U+064A ARABIC LETTER YEH</span> (<span lang="ar" dir="rtl">ي</span>) and <span class="uname">U+06CC ARABIC LETTER FARSI YEH</span> (<span lang="ar" dir=
+"rtl">ی</span>). These differences among the character sets of each language are marked in the appendix tables.</p>
+
+
+<p>Control characters are used to produce the correct spelling of the words or to ensure correct combination with left-to-right content. Consequently, they should be preserved when storing and displaying texts.</p>
+</section>
+
+
+
+
+
+
+
+
+<section class="h_segmentation">
+<h3>Grapheme/word segmentation &amp; selection</h3>
+
+<aside class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement &amp; selection, character counts, searching &amp; matching, text insertion, line-breaking, justification, case conversions, sorting? Are words separated by spaces, or other characters? Are there special requirements when double-clicking on the text? Are words hyphenated?</aside>
+
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#word" class="external">Word boundaries</a> • <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#graphemes" class="external">Graphemes</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Agrapheme_word_segmentation+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Agrapheme_word_segmentation">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Agrapheme_word_segmentation">Arabic script</a><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Asegmentation"> issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-grapheme-word-segmentation.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/glyph_character_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3AGrapheme_word">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#segmentation">Grapheme/word segmentation &amp; selection</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#segmentation">Grapheme/word segmentation &amp; selection</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
 
 <p>Similar to alphabetic orthographical conventions of Latin script, word-boundaries in
 Arabic script can be distinguished by white space and a specific subset of punctuation
@@ -1200,14 +1680,442 @@ dates back to 1514, lacks word-space boundaries and shows all characteristics of
 
 <p>For line segmentation (or more precisely, where line breaks are allowed) see section 4.1 and for details paragraph boundaries see Section 4.3.</p>
 </section>
+</section>
 
 
 
 
 
 
-<section id="h_numbers">
-<h3>Numbers</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="h_characters_and_phrases">
+<h2>Punctuation &amp; inline features</h2>
+
+<aside class="prompts">This section describes typographic features related to word boundaries, phrase &amp; section boundaries, bracketed text, quotations &amp; citations, emphasis, abbreviation, ellipsis &amp; repetition, inline notes &amp; annotations, other punctuation, and other inline text decoration.</aside>
+
+
+
+
+
+
+
+
+
+<section id="h_phrase">
+<h3>Phrase &amp; section boundaries</h3>
+
+
+<aside class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections? What about other punctuation, such as dashes, connectors, separators, etc?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#phrase" class="external">Phrase &amp; section boundaries</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Ainline_features_punctuation+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Ainline_features_punctuation">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Apunctuation-etc">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#punctuation_etc">Phrase &amp; section boundaries</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="h_quotations">
+<h3>Quotations &amp; citations</h3>
+
+
+<aside class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue? Are the same mechanisms used to cite words, or for scare quotes, etc? What about citing book or article names?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#quotations" class="external">Quotations &amp; citations</a></li>
+
+<li><cite>Wikipedia</cite>: <a  target="_blank" href="https://en.wikipedia.org/wiki/Quotation_mark" class="external">Quotation mark</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aquotations+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aquotations">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Aquotations">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-quotations.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3AQuotations">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/the-q-element.html">The q element</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#quotations">Quotations</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#quotations">Quotations &amp; citations</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+<section id="h_emphasis">
+<h3>Emphasis &amp; highlighting</h3>
+
+
+<aside class="prompts">How are emphasis and highlighting achieved? If lines or marks are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#emphasis" class="external">Emphasis &amp; highlighting</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aemphasis+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aemphasis">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Aemphasis">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-emphasis.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3AEmphasis">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#emphasis">Emphasis &amp; highlighting</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+<section id="h_abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+
+
+<aside class="prompts">What characters or other methods are used to indicate abbreviation, ellipsis &amp; repetition?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#abbrev" class="external">Abbreviation, ellipsis &amp; repetition</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aabbr_ellip_repetition+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aabbr_ellip_repetition">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Aabbr_ellip_repetition">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li>tbd</li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+<section id="h_inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+
+
+<aside class="prompts">What mechanisms, if any, are used to create *inline* notes and annotations? (For referent-type notes such as footnotes, see further down.)</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Ainline_notes_annotations+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Ainline_notes_annotations">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Ainline_notes">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-inline-notes-annotations.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3AInline_notes_annotations">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#inline_notes">Inline notes &amp; annotations</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#inline_notes">Inline notes &amp; annotations</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+<section id="h_otherinline">
+<h3>Other inline features</h3>
+
+
+<aside class="prompts">Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc. What characters or methods (eg. text decoration) are used to convey information about a range of text? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?  Are there other punctuation marks that were not covered in preceding sections?</aside>
+
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#otherinline" class="external">Other inline features</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Atext-decoration+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Atext-decoration">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Atext-decoration">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-text-decoration.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3AArabic+label%3Adoc%3AText_decoration">Exploratory/interactive test repo</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#text_decoration">Other inline features</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+<section id="h_dataformats">
+<h3>Data formats &amp; numbers</h3>
+
+
+<aside class="prompts">Relevant here are formats related to number, currency, dates, personal names, addresses, and so forth. Also, some scripts have one or sometimes more sets of their own numeric characters. In some cases, numeric characters represent numbers like 100, or 10,000. Numeric formats can also vary significantly, in terms not only of the separators and negative signs used, but also the groupings used for digits, and sometimes the mechanisms used to distinguish numbers from the text.</aside>
+
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#numbers" class="external">Numbers, dates, currency, etc.</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Adata_formats_numbers+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Adata_formats_numbers">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Adata_formats">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#data_formats">Data formats &amp; numbers</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#data_formats">Data formats &amp; numbers</a></li>
+</ul>
+</dd>
+</dl>
+
+
 
 
 
@@ -1487,18 +2395,13 @@ separator</span> and <span class="qterm">thousands separator</span>, respectivel
 </ul>
 </section>
 </section>
-
-
-
-
-    	
-<section id="h_mixedscript">
-<h3>Considerations for mixed-script text</h3>
-
-
-<p>Arabic ascenders and descenders extend much further than those of the Latin script, and care must be taken to correctly align text in the different scripts when they appear together.</p>
 </section>
-</section>
+
+
+
+
+
+
 
 
 
@@ -1507,11 +2410,64 @@ separator</span> and <span class="qterm">thousands separator</span>, respectivel
 
 
 <section id="h_lines_and_paragraphs">
-<h2>Lines and Paragraphs</h2>
+<h2>Line &amp; paragraph layout</h2>
 
+
+<aside class="prompts">This section describes typographic features related to line breaking &amp; hyphenation, text alignment &amp; justification, text spacing, baselines, line height, counters, lists, and styling initials.</aside>
 
 <section id="h_line_breaking">
-<h3>Line breaking</h3>
+<h3>Line breaking &amp; hyphenation</h3>
+
+<aside class="prompts">Are there special rules about the way text wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that? Is hyphenation used, or something else? What rules are used? What difficulties exist?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd class="reqs">
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#linebreak">Line breaking &amp; hyphenation</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/articles/typography/linebreak">Approaches to line-breaking</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd class="gh_discussions">
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Aquestion+label%3Ai%3Aline_breaking+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aline_breaking">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Aline-breaking">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd class="tests">
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-line-breaking.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3AArabic+label%3Adoc%3ALine_breaking">Exploratory/interactive test repo</a></li>
+</ul>
+</dd>
+
+<dt>Gap analysis</dt>
+<dd class="gap_analysis">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#line_breaking"> Line breaking</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#line_breaking">Line breaking</a> • <a target="_blank" href="https://www.w3.org/TR/typography/#hyphenation">Hyphenation</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
 
 <p>When Arabic text doesn't fit within the available line width, the text is wrapped to the next line between words.</p>
 
@@ -1523,8 +2479,64 @@ separator</span> and <span class="qterm">thousands separator</span>, respectivel
 
 
 
-<section id="h_justification">
+<section id="h_alignment">
 <h3>Text alignment &amp; justification</h3>
+
+<aside class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#justification">Text alignment &amp; justification</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/articles/typography/justification">Approaches to full justification</a></li>
+
+<li><a target="_blank" href="https://www.tug.org/tugboat/tb27-2/tb87benatia.pdf">Arabic text justification</a></li>
+
+<li><a target="_blank" href="http://quod.lib.umich.edu/j/jep/3336451.0013.105?view=text;rgn=main">Justify Just or Just Justify (Arabic)</a></li>
+
+<li><a target="_blank" href="https://r12a.github.io/blog/201110.html#20140523">Typography questions for HTML &amp CSS: Arabic justification</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Aquestion+label%3Ai%3Atext_align_justification+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue++label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Atext_align_justification">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Ajustification">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-text-alignment-justification.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3AArabic+label%3Adoc%3AText_alignment_justification">Exploratory/interactive test repo</a></li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#justification"> Text alignment &amp; justification</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#justification">Text alignment &amp; justification</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
 
 <p>Lines of Arabic script text are normally right aligned within the page.</p>
 
@@ -1719,8 +2731,58 @@ result, the software would fall back to inter-word spacing and stretch the space
 
 
 
-<section id="h_letterspacing">
-<h3>Letter-spacing</h3>
+
+
+<section id="h_spacing">
+<h3>Text spacing</h3>
+
+<aside class="prompts">This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word? (For justification related spacing, see Text alignment &amp; justification, above).</aside>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#spacing">Text spacing</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue++label%3Al%3Aarb%2Cl%3Apes+label%3Aquestion+label%3Ai%3Aletter_spacing">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue++label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Aletter_spacing">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Aletter_spacing">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3AText_spacing">Exploratory/interactive test repo</a></li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#spacing">Letter spacing</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#spacing">Text spacing</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+
 
 <p>There are situations where Arabic text is stretched for reasons other than justification. Common instances include:</p>
 
@@ -1742,8 +2804,124 @@ the stretching is not usually equidistant between all characters in the stretche
 
 
 
+
+
+<section id="h_baselines">
+<h3>Baselines, line height, etc.</h3>
+
+<aside class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general? Is line height special for this script? Are there other aspects that affect line spacing, or positioning of items vertically within a line?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#baselines">Baselines, line height, etc.</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Abaselines_line_height_etc+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Abaselines_line_height_etc">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Abaselines">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test results (tbc)</li>
+
+<li>Exploratory/interactive test repo (tbc)</li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#baselines"> Baselines, line-height, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#baselines">Baselines, line-height, etc</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+<p>Arabic ascenders and descenders extend much further than those of the Latin script, and care must be taken to correctly align text in the different scripts when they appear together.</p>
+
+</section>
+
+
+
+
+
+
+
 <section id="h_counters">
-<h3>Counters, lists, etc</h3>
+<h3>Lists, counters, etc.</h3>
+
+<aside class="prompts">Are there list or other counter styles in use? If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#lists">Counters, lists, etc</a></li>
+<li><cite> Ready-made Counter Styles</cite>: <a target="_blank" href="https://www.w3.org/TR/predefined-counter-styles/#arabic-styles">Arabic</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Aquestion+label%3Ai%3Alists_counters_etc">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue++label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Alists_counters_etc">All Arabic/Persian issues on this topic in the alreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Alists">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-lists-counters-etc.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3AArabic+label%3Adoc%3ALists_counters_etc">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/predefined-counter-styles#simplenumeric">I18n test suite: CSS3 Counter Styles, predefined styles</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/custom-counter-styles#arabic">I18n test suite: Custom counter styles</a></li>
+</ul>
+
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#lists"> Lists, counters, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#lists">Lists, counters, etc</a></li>
+</ul>
+</dd>
+</dl>
+
+
 
 <p>Arabic script text may use special counter styles for lists, numbering headings, pages, etc., based on Arabic script characters.</p>
 </section>
@@ -1754,7 +2932,71 @@ the stretching is not usually equidistant between all characters in the stretche
 
 
 
+<section id="h_initials">
+<h3>Styling initials</h3>
+
+<aside class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? Are dropped, sunken, and raised types found? etc.</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/arab/arb.html#initials">Styling initials</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3Al%3Aarb%2Cl%3Apes+label%3Aquestion+label%3Ai%3Astyling_initials">Open requests for information</a></li>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3Al%3Aarb%2Cl%3Apes+label%3Ai%3Astyling_initials">All Arabic/Persian issues on this topic in the alreq repo</a></li><li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Aalreq+label%3Aspec-type-issue+label%3Ai%3Ainitials">Arabic script issues on this topic in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-styling-initials#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+label%3Ah2%3AArabic+label%3Adoc%3AStyling_initials">Exploratory/interactive test repo</a></li>
+</ul>
+
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#initials">Styling initials</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#initials">Styling initials</a></li>
+</ul>
+</dd>
+</dl>
 </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="appendix" id="characters-tables">
 <h2>Characters</h2>
 
@@ -8817,22 +10059,6 @@ the stretching is not usually equidistant between all characters in the stretche
         </tr>
       </tbody>
     </table>
-  </section>
-
-
-  <section class="appendix" id="acknowledgements">
-    <h2>Acknowledgements</h2>
-
-
-    <p>Special thanks to the following people who contributed to this document (contributors' names
-    listed in in alphabetic order).</p>
-
-
-    <p class="acknowledgement">Khaled Hosny, Azzeddine Lazrek</p>
-
-
-    <p data-lang="en">Please find the latest info of the contributors at the <a href=
-    "https://github.com/w3c/alreq/graphs/contributors">GitHub contributors list</a>.</p>
   </section>
 </body>
 </html>
