@@ -201,21 +201,22 @@ table.characters tr td.langMarkNo, span.langMarkNo {
 .prompts { font-style: italic; color: #999; font-size: 90%; }
 
 dl.reslinks {
-    border-block-end: 1px solid #ccc;
+    /*border-block-end: 1px solid #ccc;*/
     margin-block-end: 3em;
 	}
+dl + p {
+  border-block-start: 1px solid #ccc;
+  padding-block-start: 1rem;
+}
 
 
 
 
 
 #linkWarning {
-    position:fixed;
-    bottom:0;
     margin-inline: 2.5%;
     background-color: antiquewhite;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-radius: 1em;
     font-size: 90%;
     padding: 1em;
     z-index: 2000;
