@@ -25,11 +25,11 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 ### LReq documents
 - **Arabic & Persian Layout Requirements** • [DNOTE](https://www.w3.org/TR/alreq) • [*Editor's draft*](https://www.w3.org/International/alreq/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
 
-- **Perso-Arabic Kashmiri Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ks-lreq) • [*Editor's draft*](https://www.w3.org/International/arab-ks/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
+- **Perso-Arabic Kashmiri Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ks-lreq) • [*Editor's draft*](https://www.w3.org/International/alreq/arab-ks/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
 
-- **Urdu Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ur-lreq) • [*Editor's draft*](https://www.w3.org/International/arab-ur/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
+- **Urdu Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ur-lreq) • [*Editor's draft*](https://www.w3.org/International/alreq/arab-ur/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
 
-- **Uighur Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ug-lreq) • [*Editor's draft*](https://www.w3.org/International/arab-ug/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
+- **Uighur Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ug-lreq) • [*Editor's draft*](https://www.w3.org/International/alreq/arab-ug/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
 
 
 
