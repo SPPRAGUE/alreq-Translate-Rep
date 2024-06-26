@@ -19,7 +19,7 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 ### Key links
-[GitHub repo](https://github.com/w3c/alreq) • [Discussion threads](https://github.com/w3c/alreq/issues) • [Issue tracker](https://www.w3.org/International/i18n-activity/textlayout/?filter=alreq) (with alreq filter) • [Charter](https://www.w3.org/International/alreq/charter/)
+[GitHub repo](https://github.com/w3c/alreq) • [Discussion threads](https://github.com/w3c/alreq/issues) • [Charter](https://www.w3.org/International/alreq/charter/)
 
 
 ### LReq docs
