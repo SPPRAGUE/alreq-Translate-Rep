@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 
 <title>Arabic and Persian Gap Analysis</title>
-<script class="remove" src="../../i18n-activity/textlayout/resources/gap-analysis-github.js"></script>
+<script class="remove" src="../../i18n-activity/templates/gap-analysis/gap-analysis-github.js"></script>
 <script class="remove" src="../../i18n-activity/templates/gap-analysis/prompts.js"></script>
 
 <script src="https://www.w3.org/Tools/respec/respec-w3c" async="" class="remove">
@@ -43,7 +43,7 @@
 
 	preProcess: [
 		() => { addPrompts() },
-		async () => { await getAllData('alreq', 'doc:arfa') }
+		async () => { await getAllData('alreq', 's:arab') }
 		],
 
 	postProcess: [
@@ -163,22 +163,22 @@
 
 
 
-<section id="h_characters_and_phrases">
-<h2>Characters and phrases</h2>
+
+
+
+
+
+
+
+
+
+<section id="h_shaping">
+<h2>Glyph shaping &amp; positioning</h2>
     
     
     
-<section id="charset" class="ok">
-<h3>Characters &amp; encoding</h3>
-<p id="prompt-charset" class="status_prompt promptStub"></p>
-
-<div id="insert-charset"></div>
-</section>
-
-
-
 <section id="fonts" class="ok">
-<h3>Fonts</h3>
+<h3>Fonts &amp; font styles</h3>
 <p id="prompt-fonts" class="status_prompt promptStub"></p>
 
 
@@ -187,13 +187,6 @@
 
 
 
-<section id="font_style" class="tbd">
-<h3>Font  styles, weight, etc</h3>
-<p id="prompt-font_style" class="status_prompt promptStub"></p>
-
-
-<div id="insert-font_style"></div>
-</section>
 
 
 
@@ -207,6 +200,20 @@
 
 
 
+
+
+
+<section id="letterforms" class="tbd">
+<h3>Letterform slopes, weights, &amp; italics</h3>
+<p id="prompt-letterforms" class="status_prompt promptStub"></p>
+
+
+<div id="insert-letterforms"></div>
+</section>
+
+
+
+
 <section id="cursive" class="tbd">
 <h3>Cursive text</h3>
 <p id="prompt-cursive" class="status_prompt promptStub"></p>
@@ -217,24 +224,40 @@
 
 
 
-<section id="baselines" class="ok">
-<h3>Baselines, line-height, etc</h3>
-<p id="prompt-baselines" class="status_prompt promptStub"></p>
-
-
-<div id="insert-baselines"></div>
-</section>
-
-
-
 
 <section id="transforms" class="na">
-<h3>Transforming characters</h3>
+<h3>Case &amp; other character transforms</h3>
 <p id="prompt-transforms" class="status_prompt promptStub"></p>
 
 
 <div id="insert-transforms"></div>
 </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="h_units">
+<h2>Typographic units</h2>
+    
+    
+<section id="encoding" class="ok">
+<h3>Characters &amp; encoding</h3>
+<p id="prompt-encoding" class="status_prompt promptStub"></p>
+
+<div id="insert-encoding"></div>
+</section>
+
+
 
 
 
@@ -251,30 +274,41 @@
 
 <div id="insert-segmentation"></div>
 </section>
- 
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="h_inline">
+<h2>Punctuation &amp; inline features</h2>
 
 
 <section id="punctuation_etc" class="tbd">
-<h3>Inline features &amp; punctuation</h3><p id="prompt-punctuation_etc" class="status_prompt promptStub"></p>
+<h3>Phrase &amp; section boundaries</h3>
+<p id="prompt-punctuation_etc" class="status_prompt promptStub"></p>
 
 
 <div id="insert-punctuation_etc"></div>
 </section>
-   
-    
-    
-<section id="text_decoration" class="tbd">
-<h3>Text decoration</h3>
-<p id="prompt-text_decoration" class="status_prompt promptStub"></p>
 
 
-<div id="insert-text_decoration"></div>
-</section>
+
+
 
 
 
 <section id="quotations" class="tbd">
-<h3>Quotations</h3>
+<h3>Quotations &amp; citations</h3>
 <p id="prompt-quotations" class="status_prompt promptStub"></p>
 	
 	
@@ -289,6 +323,22 @@
 
 <div id="insert-inline_notes"></div>
 </section>
+
+
+   
+    
+    
+<section id="text_decoration" class="tbd">
+<h3>Text decoration &amp; other inline features</h3>
+<p id="prompt-text_decoration" class="status_prompt promptStub"></p>
+
+
+<div id="insert-text_decoration"></div>
+</section>
+
+
+
+
 
 
 
@@ -319,14 +369,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <section id="h_lines_and_paragraphs">
-<h2>Lines and Paragraphs</h2>
+<h2>Line and paragraph layout</h2>
 
  
 <section id="line_breaking" class="ok">
-<h3>Line breaking</h3>
+<h3>Line breaking &amp; hyphenation</h3>
 <p id="prompt-line_breaking" class="status_prompt promptStub"></p>
 
+<p>There is no hyphenation in Arabic or Persian language text. </p>
 
 <div id="insert-line_breaking"></div>
 
@@ -334,14 +394,6 @@
 
 
 
-<section id="hyphenation" class="na">
-<h3>Hyphenation</h3>
-<p id="prompt-hyphenation" class="status_prompt promptStub"></p>
-
-<p>There is no hyphenation in Arabic or Persian language text. </p>
-
-<div id="insert-hyphenation"></div>
-</section>
 
 
 
@@ -366,6 +418,22 @@
 
 
 
+
+
+
+<section id="baselines" class="ok">
+<h3>Baselines, line-height, etc</h3>
+<p id="prompt-baselines" class="status_prompt promptStub"></p>
+
+
+<div id="insert-baselines"></div>
+</section>
+
+
+
+
+
+
 <section id="lists" class="tbd">
 <h3>Lists, counters, etc.</h3>
 <p id="prompt-lists" class="status_prompt promptStub"></p>
@@ -373,6 +441,9 @@
 
 <div id="insert-lists"></div>
 </section>
+
+
+
 
 
 
@@ -403,6 +474,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <section id="h_pages">
 <h2>Page &amp; book layout</h2>
 
@@ -416,6 +496,24 @@
 
 
 
+
+
+
+
+
+<section id="grids_tables" class="ok">
+<h3>Grids &amp; tables</h3>
+<p id="prompt-grids_tables" class="status_prompt promptStub"></p>
+
+
+<div id="insert-grids_tables"></div>
+</section>
+
+
+
+
+
+
 <section id="footnotes_etc" class="tbd">
 <h3>Footnotes, endnotes, etc.</h3>
 <p id="prompt-footnotes_etc" class="status_prompt promptStub"></p>
@@ -423,6 +521,10 @@
 
 <div id="insert-footnotes_etc"></div>
 </section>
+
+
+
+
 
 
 
