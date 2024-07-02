@@ -191,6 +191,8 @@ table.characters tr td.langMarkNo, span.langMarkNo {
 
 
 
+
+
 .reslinks dt {
     font-size: 80%;
     }
@@ -201,14 +203,13 @@ table.characters tr td.langMarkNo, span.langMarkNo {
 .prompts { font-style: italic; color: #999; font-size: 90%; }
 
 dl.reslinks {
-    /*border-block-end: 1px solid #ccc;*/
+    border-block-end: 1px solid #ccc;
     margin-block-end: 3em;
 	}
-dl + p {
-  border-block-start: 1px solid #ccc;
-  padding-block-start: 1rem;
-}
 
+.nobullet {
+    list-style-type: none;
+    }
 
 
 
@@ -228,6 +229,12 @@ dl + p {
     color: #999;
     }
 
+
+
+.variable.empty, .variable.empty:visited {
+    color: gray;
+    font-style: italic;
+    }
 
 
 
