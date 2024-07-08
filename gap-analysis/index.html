@@ -59,6 +59,13 @@
 				)
 			}
 		],
+      
+      
+      // langs array lists languages addressed by this document, in order of speaker (highest first)
+      // it is used to generate the javascript needed for the matrix
+      langs: ['Arabic', 'Urdu', 'Persian', 'Pashto', 'Sindhi', 'Kurdish', 'Saraiki', 'Kashmiri', 'Uighur'],
+      langTags: ['arb', 'ur', 'pes', 'ps', 'sd', 'ku', 'srk', 'ks', 'ug'],
+      gapDocPath: 'https://www.w3.org/TR/cher-gap/',
 	}
 </script>
 
@@ -316,6 +323,40 @@
 </section>
 
 
+
+
+
+
+
+
+<section id="emphasis" class="tbd">
+<h3>Emphasis &amp; highlighting</h3>
+<p id="prompt-emphasis" class="status_prompt promptStub"></p>
+
+
+<div id="insert-emphasis"></div>
+</section>
+
+
+
+
+
+
+
+
+<section id="abbrev" class="tbd">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p id="prompt-abbrev" class="status_prompt promptStub"></p>
+
+
+<div id="insert-abbrev"></div>
+</section>
+
+
+
+
+
+
 <section id="inline_notes" class="ok">
 <h3>Inline notes &amp; annotations</h3>
 <p id="prompt-inline_notes" class="status_prompt promptStub"></p>
@@ -323,6 +364,7 @@
 
 <div id="insert-inline_notes"></div>
 </section>
+
 
 
    
