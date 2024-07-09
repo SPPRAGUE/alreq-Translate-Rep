@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Arabic Script Layout Requirements</title>
+  <title>Arabic Script Resources</title>
   <script src="https://www.w3.org/Tools/respec/respec-w3c" async class="remove"></script>
   <script class="remove">
     var respecConfig = {
@@ -53,11 +53,11 @@
 
 <body>
 <div id="abstract">
-<p>This document describes or points to requirements for the layout and presentation of text in languages that use the Arabic script. The target audience is developers of Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode, as well as implementers of web browsers, ebook readers, and other applications that need to render text in the Arabic script.</p>
+<p>This document  points to resources  related to the layout and presentation of text in languages that use the Arabic script. The target audience is developers of Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode, as well as implementers of web browsers, ebook readers, and other applications that need to render text in the Arabic script.</p>
 </div>
 
 <div id="sotd">
-<p>This document describes the basic requirements for Arabic script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of languages written using the Arabic script. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/alreq-gap/">document that summarises gaps</a> in support  for the Arabic script on the Web.</p>
+<p>This document points to resources for Arabic script layout and text support on the Web and in eBooks. These resources provide information for Web technologies such as CSS, HTML and digital publications about how to support users of languages written using the Arabic script. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/alreq-gap/">document that summarises gaps</a> where the Web fails to adequately support the Arabic script.</p>
 
 <p>The editor's draft of this document is being developed in the GitHub repository <a href="https://w3c.github.io/alreq/">Language Enablement for Arabic Script languages (alreq)</a>, with contributors from the <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/International/i18n-activity/i18n-ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/i18n-activity/i18n-wg/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
 
@@ -67,19 +67,6 @@
 
 
 
-
-<section id="abstract">
-<p>This document describes or points to requirements for the layout and presentation of text in languages that use the Arabic script. The target audience includes developers of Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode, as well as implementers of web browsers, ebook readers, and other applications that need to render Arabic script text.</p>
-</section>
-
-
-<section id="sotd">
-<p>This document describes the basic requirements for Arabic script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Arabic scripts. Currently the document focuses on Standard Arabic and Persian.</p>
-
-<p>The editor's draft of this document is being developed by the <a href="http://w3c.github.io/alreq/homepage/">Arabic Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
-
-<p data-lang="en">To make it easier to track comments, please raise a separate issue for each comment, and at the start of the issue add a URL pointing to the section you are commenting on.</p>
-</section>
 
 
 
@@ -126,7 +113,7 @@
 <section id="h_about_this_document">
 <h3>About this document</h3>
 
-<p>The aim of this document is to describe the basic requirements for Arabic script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support users of languages written using the Arabic script.</p>
+<p>This document  points to resources for Arabic script layout and text support on the Web and in eBooks. These resources provide information for developers of Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support  languages written using the Arabic script. They include requirements, tests, GitHub discussions, type samples, and more,</p>
 
 <p>A large number of languages are written using the Arabic script. Often the script is adapted in order to write a given language. For example, Arabic, Persian, and Urdu abjads write vowels using a mixture of letters and diacritics, but the diacritics are only ever used when it is necessary to clarify certain vowel sounds and are rarely found in normal text; Uighur, on the other hand, uses letters only for vowel sounds, behaving like an alphabet; languages such as Kashmiri and African ajami also use a mixture of letters and diacritics to write vowels, but the diacritics are not dropped, making their use of the script also alphabetic.</p>
 
@@ -140,12 +127,11 @@
 <section id="h_gap_analysis">
 <h3>Gap analysis</h3>
 
-<p>This document is pointed to by a separate document, <a href="https://www.w3.org/TR/alreq-gap/">Arabic Script Gap Analysis</a>, which describes gaps in support for languages using the Arabic script on the Web, and prioritises and describes the impact of those gaps on the user.</p>
+<p>This document is pointed to by a separate document, <a href="https://www.w3.org/TR/alreq-gap/">Arabic Script Gap Analysis</a>, which describes gaps in language support for users of the Arabic script, and prioritises and describes the impact of those gaps on the user.</p>
 
-<p>Wherever an unsupported feature is identified through the gap analysis process, the requirements for that feature need to be documented. This  document is where those requirements are described.</p>
-
-<p>This document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
+<p>Gap reports are brought to the attention of spec and browser implementers, and are tracked via the <a href="https://github.com/orgs/w3c/projects/95" target="_blank">Gap Analysis Pipeline</a>. (<a href="https://github.com/orgs/w3c/projects/95/views/1?filterQuery=label%3A%22s%3Aarab%22" target="_blank">Filter for Arabic script items</a>)</p>
 </section>
+
 
 
 
@@ -153,11 +139,9 @@
 <section id="h_info_requests">
 <h3>Other related resources</h3>
 
-<p>To complement any content authored specifically for this document, the sections in the document also point to related, external information, tests, GitHub discussions, etc.</p>
-
 <p>The <a href="https://w3c.github.io/typography/"><cite>Language enablement index</cite></a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
 
-<p>The W3C also has a repository with discussion threads related to the Arabic script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues in W3C working groups related to Arabic scripts. See a list of <a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Aarab+label%3Aquestion+">unresolved questions</a> for Arabic script experts. Each section below points to related discussions. See also the <a href="https://w3c.github.io/alreq/home">repository home page</a>.</p>
+<p>The W3C also has a repository with discussion threads related to the Arabic script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues related to Arabic scripts in W3C working groups. See a list of <a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Aarab+label%3Aquestion+">unresolved questions</a> for Arabic script experts. Each section below points to related discussions. See also the <a href="https://w3c.github.io/alreq/home">repository home page</a>.</p>
 </section>
 </section>
 
@@ -176,7 +160,7 @@
 <h2 id="h_all_topics">All topics</h2>
 
 
-<aside class="prompts">Links reveal results regardless of topic, for issues, tests, and samples. </aside>
+<aside class="prompts">Links reveal all results, regardless of topic, for issues, tests, and samples. </aside>
 
 
 
@@ -238,6 +222,8 @@
 
 <section id="h_bidi_text">
 <h3>Bidirectional text</h3>
+
+<aside class="prompts">If this script runs right-to-left, are there any issues when handling that? Is bidirectional text adequately supported? What about numbers and expressions? Do the Unicode bidi controls and HTML markup provide the support needed? Is isolation of directional runs problematic?</aside>
 
 
 <dl class="reslinks">
@@ -317,6 +303,8 @@
 
 <section id="h_vertical_text">
 <h3>Vertical text</h3>
+
+<aside class="prompts">Are the script requirements for vertically oriented text met? What about if you mix vertical text with scripts that are normally only horizontal? Do you need a switch to use different characters in vertical vs. horizontal text? Does the browser support short runs of horizontal text in vertical lines (tate-chu-yoko in Japanese) as expected? Is the orientation of characters and the directional ordering of characters supported as needed?</aside>
 
 
 <dl class="reslinks">
@@ -529,6 +517,9 @@
 
 <section class="h_cursive">
 <h3>Cursive text</h3>
+
+<aside class="prompts">If this script is cursive (eg. Arabic, N’Ko, Syriac, etc), are there problems or needed features related to the handling of cursive text? Do cursive links break if parts of a word are marked up or styled? Do Unicode joiner and non-joiner characters behave as expected?</aside>
+
 
 <dl class="reslinks">
 <dt>Requirements</dt>
@@ -889,11 +880,6 @@
 
 <section id="h_characters_and_phrases">
 <h2>Punctuation &amp; inline features</h2>
-
-<aside class="prompts">This section describes typographic features related to word boundaries, phrase &amp; section boundaries, bracketed text, quotations &amp; citations, emphasis, abbreviation, ellipsis &amp; repetition, inline notes &amp; annotations, other punctuation, and other inline text decoration.</aside>
-
-
-
 
 
 
@@ -1391,7 +1377,7 @@
 <h2>Line &amp; paragraph layout</h2>
 
 
-<aside class="prompts">This section describes typographic features related to line breaking &amp; hyphenation, text alignment &amp; justification, text spacing, baselines, line height, counters, lists, and styling initials.</aside>
+
 
 <section id="h_line_breaking">
 <h3>Line breaking &amp; hyphenation</h3>
