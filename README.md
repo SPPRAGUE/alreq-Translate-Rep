@@ -23,25 +23,14 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 ### LReq docs
+- **Arabic Script Resources** • [DNOTE](https://www.w3.org/TR/arab-lreq) • [*Editor's draft*](https://w3c.github.io/alreq/arab/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
+
 - **Arabic & Persian Layout Requirements** • [DNOTE](https://www.w3.org/TR/alreq) • [*Editor's draft*](https://www.w3.org/International/alreq/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
-
-- **Perso-Arabic Kashmiri Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ks-lreq) • [*Editor's draft*](https://www.w3.org/International/alreq/arab-ks/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
-
-- **Urdu Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ur-lreq) • [*Editor's draft*](https://www.w3.org/International/alreq/arab-ur/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
-
-- **Uighur Layout Requirements** • [DNOTE](https://www.w3.org/TR/arab-ug-lreq) • [*Editor's draft*](https://www.w3.org/International/alreq/arab-ug/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
 
 
 
 ### Gap-analysis docs
-- **Arabic & Persian Gap Analysis** • [DNOTE](https://www.w3.org/TR/alreq-gap) • [*Editor's draft*](https://www.w3.org/International/alreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/gap-analysis/index.html)
-
-- **Perso-arabic Kashmiri Gap Analysis** • [DNOTE](https://www.w3.org/TR/arab-ks-gap) • [*Editor's draft*](https://www.w3.org/International/alreq/gap-analysis/arab-ks-gap) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/gap-analysis/arab-ks-gap.html)
-
-- **Urdu Gap Analysis** • [*Editor's draft*](https://www.w3.org/International/alreq/gap-analysis/arab-ur-gap) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/gap-analysis/arab-ur-gap.html)
-
-- **Uighur Gap Analysis** • [DNOTE](https://www.w3.org/TR/arab-ug-gap) • [*Editor's draft*](https://www.w3.org/International/alreq/gap-analysis/arab-ug-gap) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/gap-analysis/arab-ug-gap.html)
-
+- **Arabic Script Gap Analysis** • [DNOTE](https://www.w3.org/TR/alreq-gap) • [*Editor's draft*](https://www.w3.org/International/alreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/gap-analysis/index.html)
 
 
 
@@ -77,7 +66,7 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 - [Glossary source](https://docs.google.com/spreadsheets/d/1nSxYKQm_mKroCmxU4fyJ-g70Eo1_mF89yHZg8YNOuzc/edit#gid=0) (temporary Google spreadsheet)
 - [Arabic mathematical notation](https://www.w3.org/TR/arabic-math/)
 - [Additional Requirements for Bidi in HTML & CSS](https://www.w3.org/TR/html-bidi/)
-- [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/)
+- [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/#arabic-styles)
 
 
 ### Feedback
