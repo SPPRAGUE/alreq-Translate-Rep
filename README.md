@@ -22,7 +22,7 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 [GitHub repo](https://github.com/w3c/alreq) • [Discussion threads](https://github.com/w3c/alreq/issues) • [Charter](https://www.w3.org/International/alreq/charter/)
 
 
-### LReq docs
+### Resource & requirement docs
 - **Arabic Script Resources** • [DNOTE](https://www.w3.org/TR/arab-lreq) • [*Editor's draft*](https://w3c.github.io/alreq/arab/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
 
 - **Arabic & Persian Layout Requirements** • [DNOTE](https://www.w3.org/TR/alreq) • [*Editor's draft*](https://www.w3.org/International/alreq/) • [*Latest commits*](https://github.com/w3c/alreq/commits/gh-pages/index.html)
