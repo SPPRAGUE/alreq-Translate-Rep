@@ -219,11 +219,68 @@
 
 
 
+<section id="writing_mode">
+<h3>Writing mode</h3>
+
+<aside class="prompts">In what direction does text flow along a line and across a page? (See  the Bidirectional text section if the basic direction is right-to-left.)  If the script uses vertically oriented text, what are the requirements? What about if you mix vertical text with scripts that are normally only horizontal? Do you need a switch to use different characters in vertical vs. horizontal text? Does the browser support short runs of horizontal text in vertical lines (tate-chu-yoko in Japanese) as expected? Is the orientation of characters and the directional ordering of characters supported as needed?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Arabic &amp; Persian Layout Requirements</cite>: <a target="_blank" href="https://www.w3.org/TR/alreq/#h_writing_mode">Writing mode</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion+label%3As%3Aarab+label%3Ai%3Awriting_mode">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3As%3Aarab+label%3Ai%3Awriting_mode">All Arabic script issues on this topic in the alreq repo</a></li>
+
+<li><a class="variable empty" target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+is%3Aissue+label%3Aalreq+label%3Ai%3Avertical-text">Arabic script issues in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-vertical-text.html#arabic">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/text_direction_tests/issues?q=is%3Aissue++label%3As%3Aarab+label%3Ai%3AVertical_text">Exploratory/interactive test repo</a></li>
+</ul>
+</dd>
+
+
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#writing_mode">Vertical text</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#writing_mode">Vertical text</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
 
 <section id="bidi_text">
 <h3>Bidirectional text</h3>
 
-<aside class="prompts">If this script runs right-to-left, are there any issues when handling that? Is bidirectional text adequately supported? What about numbers and expressions? Do the Unicode bidi controls and HTML markup provide the support needed? Is isolation of directional runs problematic?</aside>
+<aside class="prompts">If the general inline direction is right-to-left, are there any issues when handling that? Where the inline direction of text is mixed, is this bidirectional text adequately supported? What about numbers and expressions? Do the Unicode bidi controls and HTML markup provide the support needed? Is isolation of directional runs problematic?</aside>
 
 
 <dl class="reslinks">
@@ -287,68 +344,6 @@
 <dd class="le_index">
 <ul class="linkList">
 <li><a target="_blank" href="https://www.w3.org/TR/typography/#bidi_text">Bidirectional text</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-
-
-
-
-
-
-
-
-
-
-<section id="vertical_text">
-<h3>Vertical text</h3>
-
-<aside class="prompts">Are the script requirements for vertically oriented text met? What about if you mix vertical text with scripts that are normally only horizontal? Do you need a switch to use different characters in vertical vs. horizontal text? Does the browser support short runs of horizontal text in vertical lines (tate-chu-yoko in Japanese) as expected? Is the orientation of characters and the directional ordering of characters supported as needed?</aside>
-
-
-<dl class="reslinks">
-<dt>Requirements</dt>
-<dd>
-<ul>
-<li><cite>Arabic &amp; Persian Layout Requirements</cite>: <a target="_blank" href="https://www.w3.org/TR/alreq/#h_vertical_text">Vertical text</a></li>
-</ul>
-</dd>
-
-<dt>GitHub discussions</dt>
-<dd>
-<ul>
-<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion+label%3As%3Aarab+label%3Ai%3Avertical_text">Open requests for information</a></li>
-
-<li><a target="_blank" href="https://github.com/w3c/alreq/issues?q=is%3Aissue+label%3As%3Aarab+label%3Ai%3Avertical_text">All Arabic script issues on this topic in the alreq repo</a></li>
-
-<li><a class="variable empty" target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+is%3Aissue+label%3Aalreq+label%3Ai%3Avertical-text">Arabic script issues in W3C specs</a></li>
-</ul>
-</dd>
-
-
-<dt>Tests</dt>
-<dd>
-<ul>
-<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-vertical-text.html#arabic">Exploratory/interactive test results</a></li>
-
-<li><a target="_blank" href="https://github.com/w3c/text_direction_tests/issues?q=is%3Aissue++label%3As%3Aarab+label%3Ai%3AVertical_text">Exploratory/interactive test repo</a></li>
-</ul>
-</dd>
-
-
-<dt>Gap analysis</dt>
-<dd>
-<ul class="linkList">
-<li><a target="_blank" href="https://www.w3.org/TR/alreq-gap/#vertical_text">Vertical text</a></li>
-</ul>
-</dd>
-
-
-<dt>LE Index</dt>
-<dd class="le_index">
-<ul class="linkList">
-<li><a target="_blank" href="https://www.w3.org/TR/typography/#vertical_text">Vertical text</a></li>
 </ul>
 </dd>
 </dl>
